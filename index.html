@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superior Home Enhancements</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://i.postimg.cc/wvLKrS6Q/logo.jpg" type="image/jpeg">
+    
+    <!-- Meta Description for SEO -->
+    <meta name="description" content="Superior Home Enhancements offers top-notch camera installations, plumbing, light installations, swimming pool filter installations, table installations, and laminating floor installation.">
+    
+    <!-- Meta Keywords for SEO -->
+    <meta name="keywords" content="Camera Installations, Plumbing, Light Installation, Swimming Pool Filters, Table Installations, Laminating Floor Installation, Home Enhancements, Renovation Services">
+    
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding-top: 170px; /* Adjusted to account for increased header height */
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { top: -100px; }
+            to { top: 0; }
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .logo img {
+            width: 150px; /* Increased size for better visibility */
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10%;
+            transition: transform 0.3s;
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin-left: 10px;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+            position: relative;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background: #e8491d;
+            left: 0;
+            bottom: 0;
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            background: rgba(232, 73, 29, 0.2);
+            transform: translateY(-3px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://media.istockphoto.com/id/1049274598/photo/diy-maker-background-with-hand-tools-on-wood-table.jpg?s=612x612&w=0&k=20&c=26A-kdMDHEayeR-AB_5rcR-EtQ8CkQwflXMrtTL_MrU=') no-repeat center center/cover;
+            height: 600px;
+            position: relative;
+            color: #ffffff;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Darker overlay without blur */
+            z-index: 1;
+            /* Removed backdrop-filter to eliminate blur */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #ffffff; /* Changed to white for better contrast */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 22px;
+            color: #ffffff; /* Changed to white for better readability */
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.5;
+        }
+
+        /* About Section */
+        #about {
+            padding: 60px 0;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        #about .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            max-width: 1200px;
+            gap: 40px;
+        }
+
+        #about .about-image {
+            flex: 1;
+            min-width: 300px;
+            animation: slideInLeft 1s ease-out;
+        }
+
+        #about .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        #about .about-text {
+            flex: 1;
+            min-width: 300px;
+            animation: slideInRight 1s ease-out;
+        }
+
+        #about .about-text h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #35424a;
+        }
+
+        #about .about-text p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555555;
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Services Section */
+        #services {
+            padding: 60px 0;
+            background: #f4f4f4;
+            animation: fadeIn 1s ease-in;
+        }
+
+        #services h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            color: #35424a;
+            position: relative;
+        }
+
+        #services h2::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: #e8491d;
+            display: block;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .service-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .service {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 30%;
+            min-width: 250px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .service:hover {
+            transform: rotateY(5deg) rotateX(5deg) translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .service img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+            transition: transform 0.3s;
+        }
+
+        .service:hover img {
+            transform: scale(1.05);
+        }
+
+        .service h3 {
+            margin: 20px 0 10px;
+            font-size: 24px;
+            color: #35424a;
+        }
+
+        .service p {
+            font-size: 16px;
+            color: #555555;
+            line-height: 1.5;
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 60px 0;
+            background: #ffffff;
+            animation: fadeIn 1s ease-in;
+            text-align: center;
+        }
+
+        #contact .contact-container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        #contact h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #35424a;
+        }
+
+        #contact p {
+            font-size: 18px;
+            color: #555555;
+            margin-bottom: 10px;
+        }
+
+        #contact a {
+            color: #e8491d;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer (Now Removed Specific Elements) */
+        footer {
+            background: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            display: none; /* Hidden as per user request */
+        }
+
+        /* Gallery Modal Styles */
+        .gallery-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            z-index: 1001;
+            overflow: auto;
+        }
+
+        .gallery-content {
+            padding: 60px 20px;
+        }
+
+        .gallery-content h2 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .gallery-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .gallery-item p {
+            padding: 10px 0;
+            color: #333;
+        }
+
+        /* Close Button Styles */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .service-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service {
+                width: 80%;
+            }
+
+            .gallery-item {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .logo img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            #about .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #about .about-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            nav a {
+                padding: 8px 12px;
+                margin-left: 8px;
+                font-size: 14px;
+            }
+
+            #services h2 {
+                font-size: 28px;
+            }
+
+            #services h2::after {
+                width: 50px;
+                height: 3px;
+            }
+
+            .service img {
+                height: 150px;
+            }
+
+            #contact h2 {
+                font-size: 28px;
+            }
+
+            #contact p {
+                font-size: 16px;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 3D Effects (Optional Enhancements) */
+        .service:hover {
+            transform: rotateY(5deg) rotateX(5deg) translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <!-- Updated logo image with increased size and 1:1 aspect ratio -->
+                <img src="https://i.postimg.cc/wvLKrS6Q/logo.jpg" alt="Superior Home Enhancements Logo">
+            </div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">What I Can Do</a>
+              </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Superior Home Enhancements</h1>
+            <p>Your trusted partner for renovation, plumbing, and electrical solutions.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="https://media.istockphoto.com/id/1363295800/photo/hands-in-office-developing-interior-project-with-wood-top-view.jpg?s=612x612&w=0&k=20&c=tsTAIWhU5vTXfj1BaeHLyi9W5yI2ZFTIrUp96mTXh-0=" alt="About Us">
+            </div>
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>
+                    At Superior Home Enhancements, we specialize in providing top-notch renovation, plumbing, and electrical services. With years of experience and a team of skilled professionals, we ensure quality workmanship and customer satisfaction on every project.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>What I Can Do</h2>
+        <div class="service-container">
+            <!-- Camera Installations -->
+            <div class="service">
+                <h3>Camera Installations</h3>
+                <img src="https://media.istockphoto.com/id/673967530/photo/security-camera-setting.jpg?s=612x612&w=0&k=20&c=6-RwuEsTKpApknBoyq1xc41kfrsn2r_BUs6bamDpV6M=" alt="Camera Installations">
+                <p>Professional installation of security cameras to ensure the safety and security of your property.</p>
+            </div>
+            <!-- Plumbing -->
+            <div class="service">
+                <h3>Plumbing</h3>
+                <img src="https://media.istockphoto.com/id/171591945/photo/plumbers-tools.jpg?s=612x612&w=0&k=20&c=1R_HDXrIsAYxPeBNVYwM-S4kWz7xhZnun2rmMAbdUf0=" alt="Plumbing">
+                <p>Expert plumbing services including installations, repairs, and maintenance to keep your systems running smoothly.</p>
+            </div>
+            <!-- Light Installations -->
+            <div class="service">
+                <h3>Light Installations</h3>
+                <img src="https://media.istockphoto.com/id/1472464806/photo/decorative-antique-edison-style-filament-light-bulbs-hanging-an-electrician-is-installing.jpg?s=612x612&w=0&k=20&c=3wirHrNX0E-pN-UTaAJhQ18jyoCuUM3ZwOaUHwqbls0=" alt="Light Installations">
+                <p>Professional light installation services to enhance the lighting and ambiance of your home or office.</p>
+            </div>
+            <!-- Swimming Pool Filter Installations -->
+            <div class="service">
+                <h3>Swimming Pool Filter Installations</h3>
+                <img src="https://media.istockphoto.com/id/478431846/photo/filtration-pool.jpg?s=612x612&w=0&k=20&c=1GCJpSTknGBXuC5KXDm_a1UOtCngRGMpbBadZKVjiYc=" alt="Swimming Pool Filter Installations">
+                <p>Professional installation of pool filters to ensure crystal clear water in your swimming pool.</p>
+            </div>
+            <!-- Table Installations -->
+            <div class="service">
+                <h3>Table Installations</h3>
+                <img src="https://media.istockphoto.com/id/1271459003/photo/modern-furniture-box-joint-solid-wooden-desk-against-the-background-of-the-window.jpg?s=612x612&w=0&k=20&c=uDjsYSgS3Dw5TuHJLf0ivPCL_slfBXmgYpEusRAitqI=" alt="Table Installations">
+                <p>Professional table installations ensuring stability and aesthetic appeal for your spaces.</p>
+            </div>
+            <!-- Laminating Floor Installation -->
+            <div class="service">
+                <h3>Laminating Floor Installation</h3>
+                <img src="https://media.istockphoto.com/id/1321000927/photo/man-worker-installing-laminate-flooring-wooden-laminate-floor-plank-and-tools.jpg?s=612x612&w=0&k=20&c=ZUdCEuFPRiyHz4wYIBswn1mHvnAqBqyBcpW3kMLK4Bs=" alt="Laminating Floor Installation">
+                <p>Expert laminating floor installation services to enhance the beauty and durability of your floors.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:tiaanpret6@gmail.com">tiaanpret6@gmail.com</a></p>
+            <p>Phone: <a href="tel:+27609620601">+27 609620601</a></p>
+        </div>
+    </section>
+
+    <!-- Gallery Modal -->
+    <div class="gallery-modal" id="galleryModal">
+        <span class="close-btn" id="closeGallery">&times;</span>
+        <div class="gallery-content">
+            <h2>Gallery</h2>
+            <div class="gallery-items" id="galleryItems">
+                <!-- Gallery items will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Removed all content inside footer as per user request -->
+    </footer>
+
+    <!-- JavaScript for Popup and Gallery -->
+    <script>
+        // Function to open the gallery modal
+        function openGalleryModal() {
+            document.getElementById('galleryModal').style.display = 'block';
+            loadGalleryItems();
+        }
+
+        // Function to close the gallery modal
+        function closeGalleryModal() {
+            document.getElementById('galleryModal').style.display = 'none';
+            clearGalleryItems();
+        }
+
+        // Event listeners for opening and closing the gallery modal
+        const galleryTab = document.getElementById('galleryTab');
+        const closeGalleryBtn = document.getElementById('closeGallery');
+
+        galleryTab.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            openGalleryModal();
+        });
+
+        closeGalleryBtn.addEventListener('click', function() {
+            closeGalleryModal();
+        });
+
+        // Close modal when clicking outside the content
+        window.addEventListener('click', function(event) {
+            const galleryModal = document.getElementById('galleryModal');
+            if (event.target == galleryModal) {
+                closeGalleryModal();
+            }
+        });
+
+        // Function to load gallery items from localStorage
+        function loadGalleryItems() {
+            const galleryItemsContainer = document.getElementById('galleryItems');
+            galleryItemsContainer.innerHTML = ''; // Clear existing items
+
+            const galleryData = JSON.parse(localStorage.getItem('gallery')) || [];
+
+            if (galleryData.length === 0) {
+                galleryItemsContainer.innerHTML = '<p style="color:#fff;">No gallery items found. Please add some via the Gallery Management page.</p>';
+                return;
+            }
+
+            galleryData.forEach(item => {
+                const galleryItem = document.createElement('div');
+                galleryItem.classList.add('gallery-item');
+
+                const img = document.createElement('img');
+                img.src = item.image;
+                img.alt = 'Gallery Image';
+
+                const desc = document.createElement('p');
+                desc.textContent = item.description;
+
+                galleryItem.appendChild(img);
+                galleryItem.appendChild(desc);
+                galleryItemsContainer.appendChild(galleryItem);
+            });
+        }
+
+        // Function to clear gallery items (optional)
+        function clearGalleryItems() {
+            const galleryItemsContainer = document.getElementById('galleryItems');
+            galleryItemsContainer.innerHTML = '';
+        }
+    </script>
+
+</body>
+</html>
